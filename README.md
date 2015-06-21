@@ -21,7 +21,7 @@ tidydata<-read.table("UCI_HAR_tidydata.txt",header=TRUE)
 
 #### Description of CodeBook.md  
 
-The Code Book contains a detailed description of the processing steps applied to the raw data to create the tidy data, as well as additional relevant information about each of the variables in the output file
+The Code Book contains a detailed description of the processing steps applied to the raw data to create the tidy data, as well as additional relevant information about each of the variables in the output file.
 
 
 
