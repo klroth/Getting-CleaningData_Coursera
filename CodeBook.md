@@ -11,24 +11,27 @@ The raw data for this analysis were taken from [https://d396qusza40orc.cloudfron
 
 2. Text files containing the raw data and corresponding labels for subjects, activities and features are read into R:    
 
-* Training Data: 
-  + /UCI HAR Dataset/train/X_train.txt
-  + /UCI HAR Dataset/train/y_train.txt
-  + /UCI HAR Dataset/train/subject_train.txt
-* Test Data:
-  + /UCI HAR Dataset/train/X_test.txt
-  + /UCI HAR Dataset/train/y_test.txt
-  + /UCI HAR Dataset/train/subject_test.txt
+* Training Data (70% of the full data set, set aside for training): 
+  + /UCI HAR Dataset/train/X_train.txt (contains measurements of features)
+  + /UCI HAR Dataset/train/y_train.txt (contains a value corresponding to the activity)
+  + /UCI HAR Dataset/train/subject_train.txt (contains a value corresponding to the research subject)
+* Test Data (30% of the full data set, set aside for testing):
+  + /UCI HAR Dataset/train/X_test.txt (contains measurements of features)
+  + /UCI HAR Dataset/train/y_test.txt (contains a value corresponding to the activity)
+  + /UCI HAR Dataset/train/subject_test.txt (contains a value corresponding to the research subject)
 * Activity Labels and Features:
-  + /UCI HAR Dataset/activity_labels.txt
-  + /UCI HAR Dataset/features.txt  (read in as string, not as Factor)
+  + /UCI HAR Dataset/activity_labels.txt (contains labels for each unique value of y, identifying the activity)
+  + /UCI HAR Dataset/features.txt; read in as string, not as Factor (contains the names of the features, corresponding to the columns in X)
   
 #### Combining training & test data:
 1. Combined data sets for X, y and subject are created by row binding the training and test data for each set.  
-2. Subject data is then coerced into a factor.  
+2. Subject data is then coerced into a factor (with levels 1-30).  
 
 #### Subsetting the features from X:
-Fill in here
+We are only interested in the mean and standard deviation features of each of the study measurements. These values have feature names with the strings "mean()" or "std()" in them. 
+1. Using grepl, the indices for features containing either of these two strings are recorded and sorted in ascending order.
+2. These indices are used to create an X data subset of just these features by selecting the appropriate columns.
+3. The indices are also used to create a feature names subset.
 
 #### Naming the activities in the data set:
 Fill in here
