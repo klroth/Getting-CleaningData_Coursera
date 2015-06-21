@@ -41,5 +41,6 @@ Fill in here
 #### Create new data table with the mean of each variable grouped by activity and subject:
 Fill in here  
 
+
 ### Variables in UCI_HAR_tidydata.txt
 Fill in here
