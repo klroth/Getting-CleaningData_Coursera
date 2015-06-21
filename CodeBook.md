@@ -60,7 +60,7 @@ We would like to create a final data table that contains the mean of each variab
 The tidy data table contains 180 observations of 68 variables. *Each measurement observation is the mean value of the means or standard deviations of the raw measurements for each unique combination of Activity and Subject.* So there will be one row for every activity (6) performed by every subject (30); 6*30=180.  
 The columns each represent a variable. Descriptive variable names for the feature measurements were created using the information found in the file ""feature_info.txt" from the raw data. 
 
-#### Variables & Units
+#### Variables
 **Activity:** the activity performed by the subject; a factor with 6 levels:    
     1. Laying  
     2. Sitting  
@@ -71,71 +71,115 @@ The columns each represent a variable. Descriptive variable names for the featur
     
 **SubjectNumber:** the number identifying the research subject performing the activity; a factor with 30 levels (1-30)    
 
-**Avg_meanAccelerometerBodyTime-Xaxis**
-**Avg_meanAccelerometerBodyTime-Yaxis**
-**Avg_meanAccelerometerBodyTime-Zaxis**
-**Avg_stdAccelerometerBodyTime-Xaxis**
-**Avg_stdAccelerometerBodyTime-Yaxis**
-**Avg_stdAccelerometerBodyTime-Zaxis**
-**Avg_meanAccelerometerGravityTime-Xaxis**
-**Avg_meanAccelerometerGravityTime-Yaxis**
-**Avg_meanAccelerometerGravityTime-Zaxis**
-**Avg_stdAccelerometerGravityTime-Xaxis**
-**Avg_stdAccelerometerGravityTime-Yaxis**
-**Avg_stdAccelerometerGravityTime-Zaxis**
-**Avg_meanAccelerometerBodyJerkTime-Xaxis**
-**Avg_meanAccelerometerBodyJerkTime-Yaxis**
-**Avg_meanAccelerometerBodyJerkTime-Zaxis**
-**Avg_stdAccelerometerBodyJerkTime-Xaxis**
-**Avg_stdAccelerometerBodyJerkTime-Yaxis**
-**Avg_stdAccelerometerBodyJerkTime-Zaxis**
-**Avg_meanGyroscopeBodyTime-Xaxis**
-**Avg_meanGyroscopeBodyTime-Yaxis**
-**Avg_meanGyroscopeBodyTime-Zaxis**
-**Avg_stdGyroscopeBodyTime-Xaxis**
-**Avg_stdGyroscopeBodyTime-Yaxis**
-**Avg_stdGyroscopeBodyTime-Zaxis**
-**Avg_meanGyroscopeBodyJerkTime-Xaxis**
-**Avg_meanGyroscopeBodyJerkTime-Yaxis**
-**Avg_meanGyroscopeBodyJerkTime-Zaxis**
-**Avg_stdGyroscopeBodyJerkTime-Xaxis**
-**Avg_stdGyroscopeBodyJerkTime-Yaxis**
-**Avg_stdGyroscopeBodyJerkTime-Zaxis**
-**Avg_meanAccelerometerBodyMagnitudeTime**
-**Avg_stdAccelerometerBodyMagnitudeTime**
-**Avg_meanAccelerometerGravityMagnitudeTime**
-**Avg_stdAccelerometerGravityMagnitudeTime**
-**Avg_meanAccelerometerBodyJerkMagnitudeTime**
-**Avg_stdAccelerometerBodyJerkMagnitudeTime**
-**Avg_meanGyroscopeBodyMagnitudeTime**
-**Avg_stdGyroscopeBodyMagnitudeTime**
-**Avg_meanGyroscopeBodyJerkMagnitudeTime**
-**Avg_stdGyroscopeBodyJerkMagnitudeTime**
-**Avg_meanAccelerometerBodyFrequency-Xaxis**
-**Avg_meanAccelerometerBodyFrequency-Yaxis**
-**Avg_meanAccelerometerBodyFrequency-Zaxis**
-**Avg_stdAccelerometerBodyFrequency-Xaxis**
-**Avg_stdAccelerometerBodyFrequency-Yaxis**
-**Avg_stdAccelerometerBodyFrequency-Zaxis**
-**Avg_meanAccelerometerBodyJerkFrequency-Xaxis**
-**Avg_meanAccelerometerBodyJerkFrequency-Yaxis**
-**Avg_meanAccelerometerBodyJerkFrequency-Zaxis**
-**Avg_stdAccelerometerBodyJerkFrequency-Xaxis**
-**Avg_stdAccelerometerBodyJerkFrequency-Yaxis**
-**Avg_stdAccelerometerBodyJerkFrequency-Zaxis**
-**Avg_meanGyroscopeBodyFrequency-Xaxis**
-**Avg_meanGyroscopeBodyFrequency-Yaxis**
-**Avg_meanGyroscopeBodyFrequency-Zaxis**
-**Avg_stdGyroscopeBodyFrequency-Xaxis**
-**Avg_stdGyroscopeBodyFrequency-Yaxis**
-**Avg_stdGyroscopeBodyFrequency-Zaxis**
-**Avg_meanAccelerometerBodyMagnitudeFrequency**
-**Avg_stdAccelerometerBodyMagnitudeFrequency**
-**Avg_meanAccelerometerBodyJerkMagnitudeFrequency**
-**Avg_stdAccelerometerBodyJerkMagnitudeFrequency**
-**Avg_meanGyroscopeBodyMagnitudeFrequency**
-**Avg_stdGyroscopeBodyMagnitudeFrequency**
-**Avg_meanGyroscopeBodyJerkMagnitudeFrequency**
-**Avg_stdGyroscopeBodyJerkMagnitudeFrequency**
+**Avg_meanAccelerometerBodyTime-Xaxis:** the average mean time of the body acceleration signal along the X axis  
+
+**Avg_meanAccelerometerBodyTime-Yaxis:** the average mean time of the body acceleration signal along the Y axis  
+
+**Avg_meanAccelerometerBodyTime-Zaxis:** the average mean time of the body acceleration signal along the Z axis  
+
+**Avg_stdAccelerometerBodyTime-Xaxis:** the average std of time of the body acceleration signal along the X axis  
+
+**Avg_stdAccelerometerBodyTime-Yaxis:** the average std of time of the body acceleration signal along the Y axis  
+
+**Avg_stdAccelerometerBodyTime-Zaxis:** the average std of time of the body acceleration signal along the Z axis  
+
+**Avg_meanAccelerometerGravityTime-Xaxis:** the average mean time of the gravity acceleration signal along the X axis  
+
+**Avg_meanAccelerometerGravityTime-Yaxis:** the average mean time of the gravity acceleration signal along the Y axis  
+
+**Avg_meanAccelerometerGravityTime-Zaxis:** the average mean time of the gravity acceleration signal along the Z axis  
+
+**Avg_stdAccelerometerGravityTime-Xaxis:** the average std of time of the gravity acceleration signal along the X axis  
+
+**Avg_stdAccelerometerGravityTime-Yaxis:** the average std of time of the gravity acceleration signal along the Y axis  
+
+**Avg_stdAccelerometerGravityTime-Zaxis:** the average std of time of the gravity acceleration signal along the Z axis  
+
+**Avg_meanAccelerometerBodyJerkTime-Xaxis:** the average mean time of the body linear acceleration along the X axis  
+
+**Avg_meanAccelerometerBodyJerkTime-Yaxis:** the average mean time of the body linear acceleration along the Y axis  
+
+**Avg_meanAccelerometerBodyJerkTime-Zaxis:** the average mean time of the body linear acceleration along the Z axis  
+
+**Avg_stdAccelerometerBodyJerkTime-Xaxis:** the average std of time of the body linear acceleration along the X axis  
+
+**Avg_stdAccelerometerBodyJerkTime-Yaxis:** the average std of time of the body linear acceleration along the Y axis  
+
+**Avg_stdAccelerometerBodyJerkTime-Zaxis:** the average std of time of the body linear acceleration along the Z axis  
+
+**Avg_meanGyroscopeBodyTime-Xaxis:** 
+**Avg_meanGyroscopeBodyTime-Yaxis:**
+**Avg_meanGyroscopeBodyTime-Zaxis:**
+**Avg_stdGyroscopeBodyTime-Xaxis:**
+**Avg_stdGyroscopeBodyTime-Yaxis:**
+**Avg_stdGyroscopeBodyTime-Zaxis:**  
+
+**Avg_meanGyroscopeBodyJerkTime-Xaxis:** the average mean time of the angular velocity along the X axis  
+
+**Avg_meanGyroscopeBodyJerkTime-Yaxis:** the average mean time of the angular velocity along the Y axis  
+
+**Avg_meanGyroscopeBodyJerkTime-Zaxis:** the average mean time of the angular velocity along the Z axis  
+
+**Avg_stdGyroscopeBodyJerkTime-Xaxis:** the average std of time of the angular velocity along the X axis  
+
+**Avg_stdGyroscopeBodyJerkTime-Yaxis:** the average std of time of the angular velocity along the Y axis  
+
+**Avg_stdGyroscopeBodyJerkTime-Zaxis:** the average std of time of the angular velocity along the Z axis  
+
+**Avg_meanAccelerometerBodyMagnitudeTime:** the average mean time of the magnitude of the 3-D body acceleration signal  
+
+**Avg_stdAccelerometerBodyMagnitudeTime:** the average std of time of the magnitude of the 3-D body acceleration signal  
+
+**Avg_meanAccelerometerGravityMagnitudeTime:** the average mean time of the magnitude of the 3-D gravity acceleration signal  
+
+**Avg_stdAccelerometerGravityMagnitudeTime:** the average std of time of the magnitude of the 3-D gravity acceleration signal  
+
+**Avg_meanAccelerometerBodyJerkMagnitudeTime:**  the average mean time of the magnitude of the 3-D body linear acceleration  
+
+**Avg_stdAccelerometerBodyJerkMagnitudeTime:**  the average std of time of the magnitude of the 3-D body linear acceleration  
+
+**Avg_meanGyroscopeBodyMagnitudeTime:**
+**Avg_stdGyroscopeBodyMagnitudeTime:**
+**Avg_meanGyroscopeBodyJerkMagnitudeTime:**
+**Avg_stdGyroscopeBodyJerkMagnitudeTime:**  
+
+**Avg_meanAccelerometerBodyFrequency-Xaxis:** the average mean frequency of the body acceleration signal along the X axis  
+
+**Avg_meanAccelerometerBodyFrequency-Yaxis:** the average mean frequency of the body acceleration signal along the Y axis  
+
+**Avg_meanAccelerometerBodyFrequency-Zaxis:** the average mean frequency of the body acceleration signal along the Z axis  
+
+**Avg_stdAccelerometerBodyFrequency-Xaxis:** the average std of frequency of the body acceleration signal along the X axis  
+
+**Avg_stdAccelerometerBodyFrequency-Yaxis:** the average std of frequency of the body acceleration signal along the Y axis  
+
+**Avg_stdAccelerometerBodyFrequency-Zaxis:** the average std of frequency of the body acceleration signal along the Z axis  
+
+**Avg_meanAccelerometerBodyJerkFrequency-Xaxis:**  the average mean frequency of the body linear acceleration along the X axis  
+
+**Avg_meanAccelerometerBodyJerkFrequency-Yaxis:** the average mean frequency of the body linear acceleration along the Y axis  
+
+**Avg_meanAccelerometerBodyJerkFrequency-Zaxis:** the average mean frequency of the body linear acceleration along the Z axis  
+
+**Avg_stdAccelerometerBodyJerkFrequency-Xaxis:** the average std of frequency of the body linear acceleration along the X axis  
+
+**Avg_stdAccelerometerBodyJerkFrequency-Yaxis:** the average std of frequency of the body linear acceleration along the Y axis  
+
+**Avg_stdAccelerometerBodyJerkFrequency-Zaxis:** the average std of frequency of the body linear acceleration along the Z axis  
+
+**Avg_meanGyroscopeBodyFrequency-Xaxis:**
+**Avg_meanGyroscopeBodyFrequency-Yaxis:**
+**Avg_meanGyroscopeBodyFrequency-Zaxis:**
+**Avg_stdGyroscopeBodyFrequency-Xaxis:**
+**Avg_stdGyroscopeBodyFrequency-Yaxis:**
+**Avg_stdGyroscopeBodyFrequency-Zaxis:**
+**Avg_meanAccelerometerBodyMagnitudeFrequency:**
+**Avg_stdAccelerometerBodyMagnitudeFrequency:**
+**Avg_meanAccelerometerBodyJerkMagnitudeFrequency:**
+**Avg_stdAccelerometerBodyJerkMagnitudeFrequency:**
+**Avg_meanGyroscopeBodyMagnitudeFrequency:**
+**Avg_stdGyroscopeBodyMagnitudeFrequency:**
+**Avg_meanGyroscopeBodyJerkMagnitudeFrequency:**
+**Avg_stdGyroscopeBodyJerkMagnitudeFrequency:**
 
 
