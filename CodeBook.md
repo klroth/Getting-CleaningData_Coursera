@@ -56,7 +56,7 @@ We would like to create a final data table that contains the mean of each variab
 
 ### Description of data in UCI_HAR_tidydata.txt
 #### Table Format
-The tidy data table contains 180 observations of 68 variables. Each observation represents a unique combination of Activity and Subject. So there will be one row for every activity (6) performed by every subject (30); 6*30=180.
+The tidy data table contains 180 observations of 68 variables. *Each measurement observation is the mean value of the mean or standard deviations of the raw measurements for each unique combination of Activity and Subject.* So there will be one row for every activity (6) performed by every subject (30); 6*30=180.  
 The columns each represent a variable, as described below.  
 
 #### Variables & Units
@@ -68,7 +68,7 @@ The columns each represent a variable, as described below.
     5. Walking Down Stairs  
     6. Walking Up Stairs  
     
-**Subject:** the number identifying the research subject performing the activity; a factor with 30 levels (1-30)    
+**SubjectNumber:** the number identifying the research subject performing the activity; a factor with 30 levels (1-30)    
 
 **NEXT VAR HERE**
 
