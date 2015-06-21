@@ -68,7 +68,7 @@ The columns each represent a variable, as described below.
     5. Walking Down Stairs  
     6. Walking Up Stairs  
     
-**Subject:** the number identifying the research subject performing the activity (a factor 1 through 30)  
+**Subject:** the number identifying the research subject performing the activity; a factor with 30 levels (1-30)    
 
 **NEXT VAR HERE**
 
