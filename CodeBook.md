@@ -41,8 +41,9 @@ We need to replace the y activity factor values with the names of the correspond
 2. A new data frame "newdata" is created by column binding the new y factor to the subject data factor and the subset of X data.  
 
 #### Giving data set descriptive variable names:
-We now want to give our new data table descriptive variable names.
-FILL IN HERE
+We now want to give our new data table descriptive variable names.  
+
+1. The column names for "newdata" are set to "Activity", "Subject" and the subset of feature names created previously.
 
 ### Creation of tidy data table in UCI_HAR_tidydata.txt
 
@@ -51,13 +52,13 @@ We would like to create a final data table that contains the mean of each variab
 
 1. The package "dplyr" is required.  
 2. A new data frame "tidy_data" is created by grouping the newdata table by Activity and Subject, and then summarizing each group with its mean value.  
-3. The table "tidy_data" is written to the output file "UCI_HAR_tidydata.txt" with no row names.  
-
+3. The column names of "tidy_data" are set to a character vector of new, descriptive measurement names. 
+4. The table "tidy_data" is written to the output file "UCI_HAR_tidydata.txt" with no row names.  
 
 ### Description of data in UCI_HAR_tidydata.txt
 #### Table Format
-The tidy data table contains 180 observations of 68 variables. *Each measurement observation is the mean value of the mean or standard deviations of the raw measurements for each unique combination of Activity and Subject.* So there will be one row for every activity (6) performed by every subject (30); 6*30=180.  
-The columns each represent a variable, as described below.  
+The tidy data table contains 180 observations of 68 variables. *Each measurement observation is the mean value of the means or standard deviations of the raw measurements for each unique combination of Activity and Subject.* So there will be one row for every activity (6) performed by every subject (30); 6*30=180.  
+The columns each represent a variable. Descriptive variable names for the feature measurements were created using the information found in the file ""feature_info.txt" from the raw data. 
 
 #### Variables & Units
 **Activity:** the activity performed by the subject; a factor with 6 levels:    
@@ -70,5 +71,71 @@ The columns each represent a variable, as described below.
     
 **SubjectNumber:** the number identifying the research subject performing the activity; a factor with 30 levels (1-30)    
 
-**NEXT VAR HERE**
+**Avg_meanAccelerometerBodyTime-Xaxis**
+**Avg_meanAccelerometerBodyTime-Yaxis**
+**Avg_meanAccelerometerBodyTime-Zaxis**
+**Avg_stdAccelerometerBodyTime-Xaxis**
+**Avg_stdAccelerometerBodyTime-Yaxis**
+**Avg_stdAccelerometerBodyTime-Zaxis**
+**Avg_meanAccelerometerGravityTime-Xaxis**
+**Avg_meanAccelerometerGravityTime-Yaxis**
+**Avg_meanAccelerometerGravityTime-Zaxis**
+**Avg_stdAccelerometerGravityTime-Xaxis**
+**Avg_stdAccelerometerGravityTime-Yaxis**
+**Avg_stdAccelerometerGravityTime-Zaxis**
+**Avg_meanAccelerometerBodyJerkTime-Xaxis**
+**Avg_meanAccelerometerBodyJerkTime-Yaxis**
+**Avg_meanAccelerometerBodyJerkTime-Zaxis**
+**Avg_stdAccelerometerBodyJerkTime-Xaxis**
+**Avg_stdAccelerometerBodyJerkTime-Yaxis**
+**Avg_stdAccelerometerBodyJerkTime-Zaxis**
+**Avg_meanGyroscopeBodyTime-Xaxis**
+**Avg_meanGyroscopeBodyTime-Yaxis**
+**Avg_meanGyroscopeBodyTime-Zaxis**
+**Avg_stdGyroscopeBodyTime-Xaxis**
+**Avg_stdGyroscopeBodyTime-Yaxis**
+**Avg_stdGyroscopeBodyTime-Zaxis**
+**Avg_meanGyroscopeBodyJerkTime-Xaxis**
+**Avg_meanGyroscopeBodyJerkTime-Yaxis**
+**Avg_meanGyroscopeBodyJerkTime-Zaxis**
+**Avg_stdGyroscopeBodyJerkTime-Xaxis**
+**Avg_stdGyroscopeBodyJerkTime-Yaxis**
+**Avg_stdGyroscopeBodyJerkTime-Zaxis**
+**Avg_meanAccelerometerBodyMagnitudeTime**
+**Avg_stdAccelerometerBodyMagnitudeTime**
+**Avg_meanAccelerometerGravityMagnitudeTime**
+**Avg_stdAccelerometerGravityMagnitudeTime**
+**Avg_meanAccelerometerBodyJerkMagnitudeTime**
+**Avg_stdAccelerometerBodyJerkMagnitudeTime**
+**Avg_meanGyroscopeBodyMagnitudeTime**
+**Avg_stdGyroscopeBodyMagnitudeTime**
+**Avg_meanGyroscopeBodyJerkMagnitudeTime**
+**Avg_stdGyroscopeBodyJerkMagnitudeTime**
+**Avg_meanAccelerometerBodyFrequency-Xaxis**
+**Avg_meanAccelerometerBodyFrequency-Yaxis**
+**Avg_meanAccelerometerBodyFrequency-Zaxis**
+**Avg_stdAccelerometerBodyFrequency-Xaxis**
+**Avg_stdAccelerometerBodyFrequency-Yaxis**
+**Avg_stdAccelerometerBodyFrequency-Zaxis**
+**Avg_meanAccelerometerBodyJerkFrequency-Xaxis**
+**Avg_meanAccelerometerBodyJerkFrequency-Yaxis**
+**Avg_meanAccelerometerBodyJerkFrequency-Zaxis**
+**Avg_stdAccelerometerBodyJerkFrequency-Xaxis**
+**Avg_stdAccelerometerBodyJerkFrequency-Yaxis**
+**Avg_stdAccelerometerBodyJerkFrequency-Zaxis**
+**Avg_meanGyroscopeBodyFrequency-Xaxis**
+**Avg_meanGyroscopeBodyFrequency-Yaxis**
+**Avg_meanGyroscopeBodyFrequency-Zaxis**
+**Avg_stdGyroscopeBodyFrequency-Xaxis**
+**Avg_stdGyroscopeBodyFrequency-Yaxis**
+**Avg_stdGyroscopeBodyFrequency-Zaxis**
+**Avg_meanAccelerometerBodyMagnitudeFrequency**
+**Avg_stdAccelerometerBodyMagnitudeFrequency**
+**Avg_meanAccelerometerBodyJerkMagnitudeFrequency**
+**Avg_stdAccelerometerBodyJerkMagnitudeFrequency**
+**Avg_meanGyroscopeBodyMagnitudeFrequency**
+**Avg_stdGyroscopeBodyMagnitudeFrequency**
+**Avg_meanGyroscopeBodyJerkMagnitudeFrequency**
+**Avg_stdGyroscopeBodyJerkMagnitudeFrequency**
+
 
