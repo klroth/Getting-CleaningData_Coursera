@@ -29,14 +29,16 @@ The raw data for this analysis were taken from [https://d396qusza40orc.cloudfron
 
 #### Subsetting the features from X:
 We are only interested in the mean and standard deviation features of each of the study measurements. These values have feature names with the strings "mean()" or "std()" in them.  
-1. Using grepl, the indices for features containing either of these two strings are recorded and sorted in ascending order.
-2. These indices are used to create an X data subset of just these features by selecting the appropriate columns.
-3. The indices are also used to create a feature names subset.
+
+1. Using grepl, the indices for features containing either of these two strings are recorded and sorted in ascending order.  
+2. These indices are used to create an X data subset of just these features by selecting the appropriate columns.  
+3. The indices are also used to create a feature names subset.  
 
 #### Naming the activities in the data set:
 We need to replace the y activity factor values with the names of the corresponding activities to make our data set more understandable. We also want to combine all our information into one table.  
-1. y is coerced into a factor with labels set to the levels of the activity labels data
-2. A new data frame "newdata" is created by column binding the new y factor to the subject data factor and the subset of X data.
+
+1. y is coerced into a factor with labels set to the levels of the activity labels data  
+2. A new data frame "newdata" is created by column binding the new y factor to the subject data factor and the subset of X data.  
 
 #### Giving data set descriptive variable names:
 We now want to give our new data table descriptive variable names.
@@ -46,9 +48,10 @@ FILL IN HERE
 
 #### Create new data table with the mean of each variable grouped by activity and subject:
 We would like to create a final data table that contains the mean of each variable of interest grouped by the unique combinations of activity and subject. Put another way, we want the mean value of each variable for each activity and each subject.  
-1. The package "dplyr" is required.
-2. A new data frame "tidy_data" is created by grouping the newdata table by Activity and Subject, and then summarizing each group with its mean value.
-3. The table "tidy_data" is written to the output file "UCI_HAR_tidydata.txt" with no row names.
+
+1. The package "dplyr" is required.  
+2. A new data frame "tidy_data" is created by grouping the newdata table by Activity and Subject, and then summarizing each group with its mean value.  
+3. The table "tidy_data" is written to the output file "UCI_HAR_tidydata.txt" with no row names.  
 
 
 ### Description of data in UCI_HAR_tidydata.txt
